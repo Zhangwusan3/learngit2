@@ -9,10 +9,20 @@ git commit -m "yourComment": commit your the staged files
 
 git status: check the file status
 git diff readme.txt: check read.txt changes with last commit
+git diff HEAD -- <file>
 
 git log
 git log --pretty=onelie: check your commit logs
 git reflog: check you commit history
 git --hard HEAD~3: reset the head to the last third changes
 git --hard versionCode: change the head to versionCode submmit
+
+git restore <file>: to discard changes in the working directory
+git restore --staged <file>: to unstage <file>
+
+Discard changes for unstaged files: git restore <files>
+Discard changes for staged files: git restore --staged <files> + git restore <files>
+
+
+
 
