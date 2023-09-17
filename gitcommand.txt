@@ -1,0 +1,18 @@
+git config user.name
+git config user.email
+git config --global user.name "yTP16"
+git config --global user.email "sy@"
+
+git init: initiate a git repositoty
+git add: stage the file
+git commit -m "yourComment": commit your the staged files
+
+git status: check the file status
+git diff readme.txt: check read.txt changes with last commit
+
+git log
+git log --pretty=onelie: check your commit logs
+git reflog: check you commit history
+git --hard HEAD~3: reset the head to the last third changes
+git --hard versionCode: change the head to versionCode submmit
+
