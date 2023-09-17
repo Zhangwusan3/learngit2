@@ -23,6 +23,12 @@ git restore --staged <file>: to unstage <file>
 Discard changes for unstaged files: git restore <files>
 Discard changes for staged files: git restore --staged <files> + git restore <files>
 
+remove files:
+rm <files>
+git rm <files> : use git restore --staged <files> + git restore <files> to discard rm
+git commit -m ""
+
+
 
 
 
