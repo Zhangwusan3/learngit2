@@ -134,6 +134,29 @@ git push origin dev:dev
 git push origin dev
 git push origin --delete dev/git push origin :dev
 -delete the remote branch
+git branch --set-upstream-to=origin/<branch-name> <branch-name>
+-set up to track branch local dev from remote
+git branch -a
+-check all branches at local and remote repository
+
+--------------git tag -a version -m "version blabla"-----------
+git switch main
+git tag v1.0
+git tag v0.9 <index>:from git log/git log --graph --pretty=oneline --abbrev-commit
+git tag -a <tagname> -m "tag comments"
+git tag
+-check tags info.
+git show <tagname>
+
+git push origin <tagname>
+git push origin --tags
+--push <tagname>/all tags to remote
+
+git tag -d <tagname>
+-delete the local tag by <tagname>
+git tag -d <tagname> + git push origin :refs/tags/<tagname>
+-delete the remote tag by <tagname>
+
 
 
 
