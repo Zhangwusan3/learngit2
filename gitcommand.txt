@@ -126,6 +126,15 @@ git switch dev
 git branch -D feature-vulcan
 -delete the unmerged branch
 
+--------------git create/push/delete remote branch-----------
+git branch
+git switch dev
+git push origin dev:dev
+---switch to dev and create a remote dev branch and push the local dev to remote
+git push origin dev
+git push origin --delete dev/git push origin :dev
+-delete the remote branch
+
 
 
 
