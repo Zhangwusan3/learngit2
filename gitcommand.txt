@@ -17,8 +17,8 @@ git diff HEAD -- <file>
 git log
 git log --pretty=onelie: check your commit logs
 git reflog: check you commit history
-git --hard HEAD~3: reset the head to the last third changes
-git --hard versionCode: change the head to versionCode submmit
+git reset --hard HEAD~3: reset the head to the last third changes
+git reset --hard versionCode: change the head to versionCode submmit
 
 git restore <file>: to discard changes in the working directory
 git restore --staged <file>: to unstage <file>
@@ -92,6 +92,13 @@ git merge --no-ff -m "merge with no-ff" dev
 git log --graph --pretty=oneline --abbrev-commit
 -check the graphic dev log, where the --no-ff merge has a log
 
+--------------git branch rm and restore-----------
+git branch -d dev
+-delet dev branch
+git reflog
+-check dev commit index
+git switch -c dev <dev commit index>/git checkout -b dev <dev commit index>
+-git branch restore
 
 
 
