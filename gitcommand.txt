@@ -28,6 +28,25 @@ rm <files>
 git rm <files> : use git restore --staged <files> + git restore <files> to discard rm
 git commit -m ""
 
+generate SSH key using git bash
+ssh-keygen -t rsa -C "sypmay@gmail.com"
+add the key in id_rsa.pub to your github account
+creat a git repository in github
+
+link a local git repository to the remote:
+git remote add origin git@github.com:Zhangwusan3/learngit2.git
+
+push local repository to the remote(local master branch to remote origin/master):
+git push -u origin master
+change branch name:
+git branch -M main
+
+push local commit to remote:
+git push origin master
+
+git remote -v: check remote repository info
+git remote rm origin: unlink local and remote repository
+
 
 
 
