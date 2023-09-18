@@ -1,3 +1,5 @@
+Git basics:
+https://www.liaoxuefeng.com/wiki/896043488029600/896954074659008
 --------------Config and initiate-----------
 git config user.name
 git config user.email
