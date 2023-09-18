@@ -100,6 +100,22 @@ git reflog
 git switch -c dev <dev commit index>/git checkout -b dev <dev commit index>
 -git branch restore
 
+--------------git bug branch and stash/cherry-pick-----------
+-you are in dev branch with unfinished task ongoing and you are required to fix bug 101 for main branch
+git stash: save current work to a stash space
+git switch main
+git switch -c issue-101
+--switch main and creat issue-101 branch; then work on issue-101 to fix bug 101 and commit changes to issue-101 branch
+git switch main
+git merge --no-ff -m "merged bug fix 101" issue-101
+--switch to main and merge fixed bug 101 from issue-101 with --no-ff
+git switch dev
+git stash list
+git stash pop/git stash apply stash@{0} ++ git stash drop (to del stashed)
+---switch back to dev and restore the previous work from stash space
+git stash
+git cherry-pick <issue-101 commit index>
+-replicate the fixed bug to dev branch{before replicate the fix use git stash to save the current work and ensure the status to be clean}
 
 
 
