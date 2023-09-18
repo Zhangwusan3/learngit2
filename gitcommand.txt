@@ -117,6 +117,15 @@ git stash
 git cherry-pick <issue-101 commit index>
 -replicate the fixed bug to dev branch{before replicate the fix use git stash to save the current work and ensure the status to be clean}
 
+--------------git delete unmerged branch-----------
+-you are working on dev branch and get a task to develop a vulcan feature
+git switch -c feature-vulcan
+-add a vulcan.py and commit changes at feature-vulcan branch
+git switch dev
+-switch wo dev, before merging the feature-vulcan to dev you are told to delete the branch feature-vulcan
+git branch -D feature-vulcan
+-delete the unmerged branch
+
 
 
 
