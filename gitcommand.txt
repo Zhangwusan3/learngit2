@@ -47,6 +47,21 @@ git push origin master
 git remote -v: check remote repository info
 git remote rm origin: unlink local and remote repository
 
+Clone a remote repositoy from github
+_________________________________________________
+git clone git@github.com:Zhangwusan3/QWidgetOCT.git
+
+git branch dev:create a dev branch
+git switch/checkout dev: change to dev branch
+git checkout -b dev/git switch -c dev: creat and switch to dev branch
+
+after work at dev branch and commit the changes to dev:
+git switch main/master
+git merge dev: fast-forward merge 
+git branc: check branch info.
+git branch -d dev: delete dev branch
+
+
 
 
 
