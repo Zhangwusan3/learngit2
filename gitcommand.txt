@@ -58,7 +58,7 @@ Clone a remote repositoy from github
 --------------git clone-----------
 git clone git@github.com:Zhangwusan3/QWidgetOCT.git
 
---------------git branch fast-forward merge-----------
+--------------git branch fast-forward(ff) merge-----------
 git branch dev:create a dev branch
 git switch/checkout dev: change to dev branch
 git checkout -b dev/git switch -c dev: creat and switch to dev branch
@@ -83,7 +83,14 @@ git branch -d feature1
 git log --gragh --pretty=oneline --abbrev-commit
 -to check the merged log
 
-
+--------------git branch merge with --no-ff-----------
+git switch -c dev
+-creat dev and commit changes on dev branch
+git switch main
+git merge --no-ff -m "merge with no-ff" dev
+-switch back main and merge dev with no-ff using a comment to log
+git log --graph --pretty=oneline --abbrev-commit
+-check the graphic dev log, where the --no-ff merge has a log
 
 
 
