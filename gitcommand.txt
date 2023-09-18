@@ -1,3 +1,4 @@
+--------------Config and initiate-----------
 git config user.name
 git config user.email
 git config --global user.name "yTP16"
@@ -7,10 +8,12 @@ git init: initiate a git repositoty
 git add: stage the file
 git commit -m "yourComment": commit your the staged files
 
+--------------check workspace status-----------
 git status: check the file status
 git diff readme.txt: check read.txt changes with last commit
 git diff HEAD -- <file>
 
+--------------Check log info/restore and discard-----------
 git log
 git log --pretty=onelie: check your commit logs
 git reflog: check you commit history
@@ -26,8 +29,9 @@ Discard changes for staged files: git restore --staged <files> + git restore <fi
 remove files:
 rm <files>
 git rm <files> : use git restore --staged <files> + git restore <files> to discard rm
-git commit -m ""
+git commit -m "rm <files>"
 
+--------------gen SSH and link local to a remote repository-----------
 generate SSH key using git bash
 ssh-keygen -t rsa -C "sypmay@gmail.com"
 add the key in id_rsa.pub to your github account
@@ -36,6 +40,7 @@ creat a git repository in github
 link a local git repository to the remote:
 git remote add origin git@github.com:Zhangwusan3/learngit2.git
 
+--------------git push-----------
 push local repository to the remote(local master branch to remote origin/master):
 git push -u origin master
 change branch name:
@@ -44,13 +49,16 @@ git branch -M main
 push local commit to remote:
 git push origin master
 
+--------------git remote -v/rm -----------
 git remote -v: check remote repository info
 git remote rm origin: unlink local and remote repository
 
 Clone a remote repositoy from github
-_________________________________________________
+
+--------------git clone-----------
 git clone git@github.com:Zhangwusan3/QWidgetOCT.git
 
+--------------git branch fast-forward merge-----------
 git branch dev:create a dev branch
 git switch/checkout dev: change to dev branch
 git checkout -b dev/git switch -c dev: creat and switch to dev branch
@@ -60,6 +68,22 @@ git switch main/master
 git merge dev: fast-forward merge 
 git branc: check branch info.
 git branch -d dev: delete dev branch
+
+--------------git branch dev and manually merge-----------
+git switch -c feature1
+-work on feature1 branch and commit changes: "AND simple"
+git switch main
+-work on main branch and commit changes:"& simple"
+git merge feature1: will be failed because blabla
+-open the conflicted files and manually fix them
+git add <conflict files>+git commit -m "feature1 conflicts fixed"
+-the conflict will be fixed
+git branch -d feature1
+-delete the feature1 branch
+git log --gragh --pretty=oneline --abbrev-commit
+-to check the merged log
+
+
 
 
 
